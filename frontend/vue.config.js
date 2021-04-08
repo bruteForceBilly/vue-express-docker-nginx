@@ -1,6 +1,6 @@
 module.exports = {
     devServer: {
-      proxy: `http://localhost:${process.env.PORT}`,
+      proxy: `http://backend:${process.env.PORT}`,
     },
   
     publicPath: "/",
