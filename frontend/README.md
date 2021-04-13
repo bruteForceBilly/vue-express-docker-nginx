@@ -1,24 +1,11 @@
-# frontend
+## vue-express-docker-nginx example
 
-## Project setup
-```
-yarn install
-```
+This repo is an example of how to set docker to compose a vue.js frontend app that is compiled in build mode and served by nginx together with an express back end (json-server). 
 
-### Compiles and hot-reloads for development
+## Quick start
 ```
-yarn serve
-```
+VUE_APP_API=<your host + port 3000> docker-compose build
+docker-compose up
+````
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Frontend app will run on port 8080

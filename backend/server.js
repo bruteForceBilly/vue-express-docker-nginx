@@ -19,6 +19,8 @@ var corsOptions = {
     allowedHeaders: 'accept, content-type'
 };
 
+// 
+
 server.use(cors(corsOptions));
 server.use(middlewares)
 server.use(router)
