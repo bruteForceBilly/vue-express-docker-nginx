@@ -1,8 +1,4 @@
 module.exports = {
-  devServer: {
-    proxy: `http://backend:${process.env.PORT}`,
-  },
-
   publicPath: "/",
   outputDir: "dist",
   indexPath: "index.html",
