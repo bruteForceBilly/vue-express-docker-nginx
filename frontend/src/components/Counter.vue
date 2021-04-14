@@ -1,7 +1,7 @@
 <template>
-  <div class="hello">
-    <h3>Counter: {{ counter }}</h3>
-    <button @click="counter++">Increment</button>
+  <div>
+    <div>counter: {{counter}}</div>
+    <button id="inc-btn" @click="inc()">Increment</button>
   </div>
 </template>
 
@@ -13,15 +13,16 @@ export default {
       counter: 0,
     };
   },
+  methods: {
+    inc() {
+      return this.counter++
+    }
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0;
-}
-
 button {
   background-color: #42b983;
   border: none;
