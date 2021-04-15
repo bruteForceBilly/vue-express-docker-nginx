@@ -1,20 +1,16 @@
 version: "3.7"
 services:
-    backend:
-        image: "backend"
+    api:
         build:
-            context: ./backend
-            args:
-                BACKEND_PORT: 3000
-        ports:
-            - 3000:3000
-    frontend:
-        image: "frontend"
+            context: ./server
+        volumes:
+            - /app/node_modules
+            - ./server:/app
+    client:
         build:
-            context: ./frontend
-            args:
-                NODE_ENV: "production"
-                VUE_APP_API: "${VUE_APP_API}"
-        ports:
-            - 8080:80
+            context: ./client
+        volumes:
+            - /app/node_modules
+            - ./client:/app
+
         

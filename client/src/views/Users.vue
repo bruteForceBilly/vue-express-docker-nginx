@@ -18,9 +18,9 @@ export default {
   },
   methods: {
     async getUsers() {
-      console.log("hello")
+      const API = process.env.VUE_APP_API;
       let data;
-      await fetch(process.env.VUE_APP_API).then(async (response) => {
+      await fetch(API).then(async (response) => {
         try {
           data = await response.json();
           console.log("response data?", data);
@@ -28,7 +28,7 @@ export default {
         } catch (error) {
           console.log("Error happened here!");
           console.error(error);
-          console.log("data", data, "env", process.env.VUE_APP_API);
+          console.log("data", data, "env", API);
         }
       });
     },

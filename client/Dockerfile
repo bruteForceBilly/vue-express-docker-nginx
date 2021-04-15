@@ -10,6 +10,7 @@ ENV NODE_ENV $NODE_ENV
 RUN yarn build
 
 FROM nginx as production-stage
+EXPOSE 3000
 RUN mkdir /app
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY --from=build-stage /app/dist /app
-COPY nginx.conf /etc/nginx/nginx.conf
