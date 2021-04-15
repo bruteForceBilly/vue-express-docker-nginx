@@ -22,9 +22,13 @@ const corsOptions = {
 
 server.use(cors(corsOptions));
 server.use(middlewares)
-
-
 server.use(jsonServer.bodyParser)
+
+server.use((req, res, next) => {
+  res.header('Content-Type', 'application/json')
+  next()
+})
+
 
 server.use(router)
 server.listen(PORT, () => {
