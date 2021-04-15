@@ -1,5 +1,5 @@
-describe('Sanity test', () => {
-    test('true to be true', () => {
-        expect(true).toBe(true)
-    })
-})
+describe("Sanity test", () => {
+  test("true to be true", () => {
+    expect(true).toBe(true);
+  });
+});

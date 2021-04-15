@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>counter: {{counter}}</div>
+    <div>counter: {{ counter }}</div>
     <button id="inc-btn" @click="inc()">Increment</button>
   </div>
 </template>
@@ -15,8 +15,8 @@ export default {
   },
   methods: {
     inc() {
-      return this.counter++
-    }
+      return this.counter++;
+    },
   },
 };
 </script>
@@ -26,12 +26,12 @@ export default {
 button {
   background-color: #42b983;
   border: none;
-	cursor: pointer;
-	color: #ffffff;
+  cursor: pointer;
+  color: #ffffff;
   display: inline-block;
-	font-size: 17px;
-	padding: 16px 31px;
+  font-size: 17px;
+  padding: 16px 31px;
   outline: none;
-	text-decoration: none;
+  text-decoration: none;
 }
 </style>
