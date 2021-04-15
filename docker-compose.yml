@@ -14,7 +14,7 @@ services:
             context: ./frontend
             args:
                 NODE_ENV: "production"
-                VUE_APP_API: "http://localhost:3000/users"
+                VUE_APP_API: ${VUE_APP_API}
         ports:
             - 8080:80
         
