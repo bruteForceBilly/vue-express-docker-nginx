@@ -28,7 +28,7 @@ export default {
         } catch (error) {
           console.log("Error happened here!");
           console.error(error);
-          console.log("data", data, "env", process.env.VUE_APP_API_URL);
+          console.log("data", data, "env", process.env.VUE_APP_API);
         }
       });
     },
