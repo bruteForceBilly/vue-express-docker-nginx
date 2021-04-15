@@ -5,16 +5,16 @@ services:
         build:
             context: ./backend
             args:
-                BACKEND_PORT: ${BACKEND_PORT}
+                BACKEND_PORT: 3000
         ports:
-            - ${BACKEND_PORT}:${BACKEND_PORT}
+            - 3000:3000
     frontend:
         image: "frontend"
         build:
             context: ./frontend
             args:
-                NODE_ENV: ${NODE_ENV}
-                VUE_APP_API: ${VUE_APP_API}
+                NODE_ENV: "production"
+                VUE_APP_API: "http://localhost:3000/users"
         ports:
             - 8080:80
         
