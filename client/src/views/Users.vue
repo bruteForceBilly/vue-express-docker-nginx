@@ -2,10 +2,11 @@
   <div class="users">
     <h1>This is a list of users</h1>
     <ul v-if="users">
-      <li v-for="(user, i) in users" :key="user + i">
+      <li v-for="(user, i) in users.users" :key="user + i">
         <h3>{{ user.name }}</h3>
       </li>
     </ul>
+    <div v-else> ...loading</div>
   </div>
 </template>
 <script>
@@ -23,13 +24,12 @@ export default {
       await fetch(API).then(async (response) => {
         try {
           data = await response.json();
-          console.log("response data?", data);
-          this.users = data;
         } catch (error) {
           console.log("Error happened here!");
           console.error(error);
           console.log("data", data, "env", API);
         }
+        this.users = data;
       });
     },
   },
