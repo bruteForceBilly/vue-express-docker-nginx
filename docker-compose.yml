@@ -3,6 +3,8 @@ services:
     client:
         build:
             context: ./client
+            args:
+                VUE_APP_API: ${VUE_APP_API}
         ports:
             - 80:80
     api:
